@@ -1,4 +1,4 @@
-package com.example.proyectopractica
+package com.example.proyectofinalhbo;
 
 import android.content.ContentValues
 import android.content.Intent
@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity() {
+public class MainActivity : AppCompatActivity() {
 
     private lateinit var crearCuenta: Button
     private lateinit var iniciarSesion: Button

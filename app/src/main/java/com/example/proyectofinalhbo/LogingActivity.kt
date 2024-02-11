@@ -1,4 +1,4 @@
-package com.example.proyectopractica
+package com.example.proyectofinalhbo;
 
 import android.content.Intent
 import android.os.Bundle
