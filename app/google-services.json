@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757536862851",
+    "project_id": "proyecto-final-73d72",
+    "storage_bucket": "proyecto-final-73d72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757536862851:android:7c98bed5a77ae23d7d21b6",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinalhbo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhX4VTEEPqZZ7jGWMQDj5Efy8EEbagC40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
