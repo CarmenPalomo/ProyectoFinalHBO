@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.proyectofinalhbo"
-        minSdk = 24
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -49,5 +49,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
+    implementation ("com.google.android.material:material:1.5.0")
+
 
 }
