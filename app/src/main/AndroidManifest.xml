@@ -13,13 +13,20 @@
         android:theme="@style/Theme.ProyectoFinalHBO"
         tools:targetApi="31">
         <activity
+            android:name=".PeliculaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SerieActivity"
+            android:exported="false" />
+        <activity
             android:name=".InicioActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
