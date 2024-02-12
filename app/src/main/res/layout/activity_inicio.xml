@@ -28,10 +28,23 @@
         android:layout_height="99dp"
         app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/hbo_max_logo_black" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="75dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.296"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -43,6 +56,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="MissingConstraints">
+
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -80,6 +95,8 @@
         </LinearLayout>
 
     </HorizontalScrollView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
