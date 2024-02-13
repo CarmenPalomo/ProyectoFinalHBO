@@ -1,5 +1,6 @@
 package com.example.proyectofinalhbo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -17,6 +18,10 @@ class PerfilActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
 
+        val imagenCasa: ImageView = findViewById(R.id.imagenCasa)
+        val imagenPeli: ImageView = findViewById(R.id.imagePeli)
+        val imagenTele : ImageView = findViewById(R.id.imageTele)
+
         val imagenPerfil : ImageView = findViewById(R.id.imagePerfil)
         val botonSiguiente : Button = findViewById(R.id.BotonSiguiente)
 
@@ -26,5 +31,27 @@ class PerfilActivity: AppCompatActivity() {
 
             imagenPerfil.setImageResource(id[indice])
         }
+
+        imagenCasa.setOnClickListener {
+
+            val inicio = Intent(this, InicioActivity::class.java)
+            startActivity(inicio)
+
+        }
+
+        imagenPeli.setOnClickListener {
+
+            val pelicula = Intent(this, PeliculaActivity::class.java)
+            startActivity(pelicula)
+
+        }
+
+        imagenTele.setOnClickListener {
+
+            val serie = Intent(this, SerieActivity::class.java)
+            startActivity(serie)
+
+        }
+
     }
 }

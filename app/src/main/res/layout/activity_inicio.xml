@@ -14,10 +14,10 @@
         android:layout_width="413dp"
         android:layout_height="80dp"
         android:background="@drawable/fondo_hbo"
-        app:titleTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
 
     </Toolbar>
 
@@ -36,8 +36,8 @@
 
     <ImageView
         android:id="@+id/imagenPerfil"
-        android:layout_width="75dp"
-        android:layout_height="72dp"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintHorizontal_bias="0.515"
@@ -110,46 +110,57 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
+
+
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
-        android:layout_width="401dp"
-        android:layout_height="174dp"
+        android:layout_width="385dp"
+        android:layout_height="161dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
 
+
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="170dp"
+                android:layout_width="143dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/peliculaquaman" />
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="139dp"
+                android:layout_width="134dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/pelicula_el_test" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="160dp"
+                android:layout_width="137dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/pelicula_dune" />
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
+                android:layout_width="133dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/serie_riverdale" />
 
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/pelicula_arturo" />
+
         </LinearLayout>
 
-
     </HorizontalScrollView>
+
+
 
 
     <ImageView

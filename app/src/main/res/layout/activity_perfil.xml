@@ -5,32 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_hbo">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="413dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fondo_hbo"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Toolbar>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="131dp"
+        android:layout_height="89dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@mipmap/hbo_max_logo_black" />
+
+
+
 
     <ImageView
         android:id="@+id/hbo_max_logo_balck"
         android:layout_width="325dp"
         android:layout_height="88dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/imagePerfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imagePerfil"
-        android:layout_width="199dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hbo_max_logo_balck"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:srcCompat="@drawable/ic_launcher_background" />
 
     <Button
         android:id="@+id/BotonSiguiente"
-        android:layout_width="122dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="388dp"
         android:backgroundTint="#322C4C"
         android:elevation="2dp"
         android:shadowColor="#5C5C5C"
@@ -41,9 +69,38 @@
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagePerfil"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfil" />
+    <ImageView
+        android:id="@+id/imagenCasa"
+        android:layout_width="140dp"
+        android:layout_height="75dp"
+        android:background="#181818"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/casa" />
+
+
+    <ImageView
+        android:id="@+id/imagePeli"
+        android:layout_width="146dp"
+        android:layout_height="75dp"
+        android:background="#16191A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenCasa"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/claqueta_cine" />
+
+    <ImageView
+        android:id="@+id/imageTele"
+        android:layout_width="124dp"
+        android:layout_height="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imagePeli"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/televisor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,6 @@ class InicioActivity : AppCompatActivity() {
         val imagenCasa: ImageView = findViewById(R.id.imagenCasa)
         val imagenPeli: ImageView = findViewById(R.id.imagePeli)
         val imagenTele : ImageView = findViewById(R.id.imageTele)
-
         val imagenPerfil : ImageView = findViewById(R.id.imagenPerfil)
 
 
