@@ -50,6 +50,7 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/edit_text_borde"
         android:hint="Nombre"
+        android:textColor="@color/white"
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
@@ -66,6 +67,7 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/edit_text_borde"
         android:hint="Apellido"
+        android:textColor="@color/white"
         android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
@@ -83,6 +85,7 @@
         android:background="@drawable/edit_text_borde"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
+        android:textColor="@color/white"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textColorHint="#878787"
@@ -99,6 +102,7 @@
         android:background="@drawable/edit_text_borde"
         android:hint="Contraseña"
         android:inputType="textPassword"
+        android:textColor="@color/white"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textColorHint="#878787"
@@ -124,6 +128,7 @@
         android:id="@+id/BotonCrearCuent"
         android:layout_width="154dp"
         android:layout_height="47dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="#322C4C"
         android:elevation="2dp"
@@ -134,10 +139,29 @@
         android:textStyle="bold"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.118" />
+
+    <Button
+        android:id="@+id/BotonInicioSesion"
+        android:layout_width="154dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="#322C4C"
+        android:elevation="2dp"
+        android:shadowColor="#5C5C5C"
+        android:text="Inicio Sesión"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/BotonCrearCuent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.978" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,6 +24,7 @@ class LogingActivity : AppCompatActivity() {
     private lateinit var nombre : EditText
     private lateinit var apellido : EditText
     private lateinit var crearCuenta : Button
+    private lateinit var BotonInicioSesion : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +39,7 @@ class LogingActivity : AppCompatActivity() {
         nombre = findViewById(R.id.Nombre)
         apellido = findViewById(R.id.Apellido)
         crearCuenta = findViewById(R.id.BotonCrearCuent)
+        BotonInicioSesion = findViewById(R.id.BotonIniciaSesion)
 
         crearCuenta.setOnClickListener {
             if (correo.text.isNotEmpty() && contraseña.text.isNotEmpty() && nombre.text.isNotEmpty() && apellido.text.isNotEmpty()){
@@ -61,13 +63,18 @@ class LogingActivity : AppCompatActivity() {
             }
         }
 
+        BotonInicioSesion.setOnClickListener {
+            val registrarse = Intent(this, MainActivity::class.java)
+            startActivity(registrarse)
+        }
+
     }
 
     private fun showAlert(mensaje : String){
         //Log.d(TAG, "Error creando nuevo usuario")
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage(mensaje)
+        builder.setMessage("Se ha producido un error en la creacion del usuario")
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog = builder.create()
         dialog.show()

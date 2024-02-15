@@ -41,14 +41,14 @@ class PerfilActivity: AppCompatActivity() {
 
         imagenPeli.setOnClickListener {
 
-            val pelicula = Intent(this, PeliculaActivity::class.java)
+            val pelicula = Intent(this, InicioActivity::class.java)
             startActivity(pelicula)
 
         }
 
         imagenTele.setOnClickListener {
 
-            val serie = Intent(this, SerieActivity::class.java)
+            val serie = Intent(this, InicioActivity::class.java)
             startActivity(serie)
 
         }

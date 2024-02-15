@@ -48,8 +48,8 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="404dp"
-        android:layout_height="271dp"
+        android:layout_width="411dp"
+        android:layout_height="297dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -97,7 +97,7 @@
 
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textoDestacado"
         android:layout_width="414dp"
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
@@ -109,16 +109,44 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+    <TextView
+        android:id="@+id/textPeliculas"
+        android:layout_width="414dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="15dp"
+        android:text="Peliculas"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 
+    <TextView
+        android:id="@+id/textSerie"
+        android:layout_width="414dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:text="Series"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
     <HorizontalScrollView
-        android:id="@+id/horizontalScrollView2"
+        android:id="@+id/scrollDestacados"
         android:layout_width="385dp"
         android:layout_height="161dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/textoDestacado">
 
 
         <LinearLayout
@@ -127,34 +155,131 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imagen1Destacado"
                 android:layout_width="143dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/peliculaquaman" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/imagen2Destacado"
                 android:layout_width="134dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/pelicula_el_test" />
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/imagen3Destacado"
                 android:layout_width="137dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/pelicula_dune" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/imagen4Destacado"
                 android:layout_width="133dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/serie_riverdale" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/imagen5Destacado"
                 android:layout_width="133dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@mipmap/pelicula_arturo" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollPeliculas"
+        android:layout_width="385dp"
+        android:layout_height="161dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoDestacado">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imagen1Peliculas"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/peliculas1" />
+
+            <ImageView
+                android:id="@+id/imagen2Peliculas"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/peliculas2" />
+
+            <ImageView
+                android:id="@+id/imagen3Peliculas"
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/peliculas3" />
+
+            <ImageView
+                android:id="@+id/imagen4Peliculas"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/peliculas4" />
+
+            <ImageView
+                android:id="@+id/imagen5Peliculas"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/peliculas5" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+    <HorizontalScrollView
+        android:id="@+id/scrollSeries"
+        android:layout_width="385dp"
+        android:layout_height="161dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoDestacado">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imagen1Serie"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/serie1" />
+
+            <ImageView
+                android:id="@+id/imagen2Serie"
+                android:layout_width="134dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/serie2" />
+
+            <ImageView
+                android:id="@+id/imagen3Serie"
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/serie3" />
+
+            <ImageView
+                android:id="@+id/imagen4Serie"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/serie4" />
+
+            <ImageView
+                android:id="@+id/imagen5Serie"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/serie5" />
 
         </LinearLayout>
 
