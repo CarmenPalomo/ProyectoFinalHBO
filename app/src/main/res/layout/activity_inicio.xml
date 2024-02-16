@@ -38,13 +38,14 @@
         android:id="@+id/imagenPerfil"
         android:layout_width="70dp"
         android:layout_height="62dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.296"
-        app:srcCompat="@mipmap/perfil1" />
+        android:src="@mipmap/perfil1" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -286,40 +287,27 @@
     </HorizontalScrollView>
 
 
-
-
-    <ImageView
-        android:id="@+id/imagenCasa"
-        android:layout_width="140dp"
-        android:layout_height="75dp"
-        android:background="#181818"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/casa" />
-
     <ImageView
         android:id="@+id/imagePeli"
-        android:layout_width="146dp"
-        android:layout_height="75dp"
+        android:layout_width="199dp"
+        android:layout_height="62dp"
         android:background="#16191A"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagenCasa"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/claqueta_cine" />
 
     <ImageView
         android:id="@+id/imageTele"
-        android:layout_width="124dp"
-        android:layout_height="76dp"
+        android:layout_width="212dp"
+        android:layout_height="61dp"
+        android:background="#16191A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imagePeli"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
-        app:layout_constraintVertical_bias="1.0"
+
         app:srcCompat="@mipmap/televisor" />
 
 

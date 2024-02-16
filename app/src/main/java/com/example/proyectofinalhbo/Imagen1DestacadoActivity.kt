@@ -13,6 +13,7 @@ class Imagen1DestacadoActivity : AppCompatActivity() {
 
 
         val video : VideoView = findViewById(R.id.video)
+        var mediaController : MediaController? = null
 
         val uri : Uri = Uri.parse("https://www.youtube.com/watch?v=nDxAQ9FUhr8")
 

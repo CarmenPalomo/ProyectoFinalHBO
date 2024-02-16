@@ -71,36 +71,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagePerfil" />
+
     <ImageView
         android:id="@+id/imagenCasa"
-        android:layout_width="140dp"
-        android:layout_height="75dp"
+        android:layout_width="170dp"
+        android:layout_height="64dp"
         android:background="#181818"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BotonSiguiente"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/casa" />
 
-
-    <ImageView
-        android:id="@+id/imagePeli"
-        android:layout_width="146dp"
-        android:layout_height="75dp"
-        android:background="#16191A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagenCasa"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/claqueta_cine" />
-
-    <ImageView
-        android:id="@+id/imageTele"
-        android:layout_width="124dp"
-        android:layout_height="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imagePeli"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@mipmap/televisor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,6 +40,7 @@ public class MainActivity : AppCompatActivity() {
         iniciarSesion = findViewById(R.id.BotonIniciaSesion)
         email = findViewById(R.id.correoElectronico)
         contraseña = findViewById(R.id.contraseña)
+        val imagen = intent.getStringExtra("imagen")
 
         iniciarSesion.setOnClickListener {
             if (email.text.isNotEmpty() && contraseña.text.isNotEmpty()){
@@ -48,6 +49,7 @@ public class MainActivity : AppCompatActivity() {
                     if (it.isSuccessful){
                         val logged = Intent(this, InicioActivity::class.java)
                         logged.putExtra("email",email.text.toString())
+                        logged.putExtra("imagen",  imagen)
                         startActivity(logged)
                     } else {
                         showAlert()

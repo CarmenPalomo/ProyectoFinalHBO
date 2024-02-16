@@ -13,11 +13,9 @@ class InicioActivity : AppCompatActivity() {
 
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
-        val imagenCasa: ImageView = findViewById(R.id.imagenCasa)
         val imagenPeli: ImageView = findViewById(R.id.imagePeli)
         val imagenTele : ImageView = findViewById(R.id.imageTele)
         val imagenPerfil : ImageView = findViewById(R.id.imagenPerfil)
@@ -28,21 +26,22 @@ class InicioActivity : AppCompatActivity() {
         val textPeliculas : TextView = findViewById(R.id.textPeliculas)
         val textSerie : TextView = findViewById(R.id.textSerie)
         val imagen1Destacado : ImageView = findViewById(R.id.imagen1Destacado)
+        val imagen = intent.getIntExtra("imagen", 0)
 
 
-        imagenCasa.setOnClickListener {
+        imagenPerfil.setImageResource(imagen)
 
-            val inicio = Intent(this, InicioActivity::class.java)
-            startActivity(inicio)
-            textoDestacado.visibility = View.VISIBLE
-            scrollDestacados.visibility = View.VISIBLE
+        textoDestacado.visibility = View.VISIBLE
+        scrollDestacados.visibility = View.VISIBLE
 
-            textPeliculas.visibility = View.INVISIBLE
-            textSerie.visibility = View.INVISIBLE
-            scrollPeliculas.visibility = View.INVISIBLE
-            scrollSeries.visibility = View.INVISIBLE
+        textPeliculas.visibility = View.INVISIBLE
+        textSerie.visibility = View.INVISIBLE
+        scrollPeliculas.visibility = View.INVISIBLE
+        scrollSeries.visibility = View.INVISIBLE
 
-        }
+
+
+
 
         imagen1Destacado.setOnClickListener {
             val inicio = Intent(this, Imagen1DestacadoActivity::class.java)
@@ -79,6 +78,7 @@ class InicioActivity : AppCompatActivity() {
         imagenPerfil.setOnClickListener {
 
             val perfil = Intent(this, PerfilActivity::class.java)
+            perfil.putExtra("imagen",  imagen)
             startActivity(perfil)
 
         }

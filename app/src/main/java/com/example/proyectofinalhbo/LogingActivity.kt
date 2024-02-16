@@ -1,9 +1,11 @@
 package com.example.proyectofinalhbo;
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -24,7 +26,14 @@ class LogingActivity : AppCompatActivity() {
     private lateinit var nombre : EditText
     private lateinit var apellido : EditText
     private lateinit var crearCuenta : Button
-    private lateinit var BotonInicioSesion : Button
+    private  lateinit var BotonInicioSesion : Button
+
+    private var indice = 0
+    private var id = arrayOf(R.mipmap.perfil1, R.mipmap.perfil2,R.mipmap.perfil3,
+        R.mipmap.perfil4, R.mipmap.perfil5, R.mipmap.perfil6,
+        R.mipmap.perfil7, R.mipmap.perfil8, R.mipmap.perfil9,
+        R.mipmap.perfil10)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +48,17 @@ class LogingActivity : AppCompatActivity() {
         nombre = findViewById(R.id.Nombre)
         apellido = findViewById(R.id.Apellido)
         crearCuenta = findViewById(R.id.BotonCrearCuent)
-        BotonInicioSesion = findViewById(R.id.BotonIniciaSesion)
+        BotonInicioSesion = findViewById(R.id.BotonInicioSesion)
+
+        var imagenPerfil : ImageView = findViewById(R.id.imagePerfil1)
+        val botonSiguiente : Button = findViewById(R.id.BotonSiguiente)
+
+        imagenPerfil.setImageResource(id[indice])
+        botonSiguiente.setOnClickListener {
+            indice = (indice + 1) % id.size
+
+            imagenPerfil.setImageResource(id[indice])
+        }
 
         crearCuenta.setOnClickListener {
             if (correo.text.isNotEmpty() && contraseña.text.isNotEmpty() && nombre.text.isNotEmpty() && apellido.text.isNotEmpty()){
@@ -54,6 +73,7 @@ class LogingActivity : AppCompatActivity() {
                             apellido.text.toString()
                         )
                         val registrado = Intent(this, MainActivity::class.java)
+                        registrado.putExtra("imagen",  imagenPerfil.id)
                         startActivity(registrado)
                     }else{
                         showAlert("Error registrando el usuario")
@@ -63,10 +83,12 @@ class LogingActivity : AppCompatActivity() {
             }
         }
 
+
         BotonInicioSesion.setOnClickListener {
             val registrarse = Intent(this, MainActivity::class.java)
             startActivity(registrarse)
         }
+
 
     }
 
