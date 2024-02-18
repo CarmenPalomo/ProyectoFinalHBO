@@ -22,7 +22,6 @@
         android:id="@+id/imageView"
         android:layout_width="131dp"
         android:layout_height="89dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
@@ -54,26 +53,10 @@
         app:srcCompat="@drawable/ic_launcher_background"
         tools:srcCompat="@drawable/ic_launcher_background" />
 
-    <Button
-        android:id="@+id/BotonSiguiente"
-        android:layout_width="103dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="388dp"
-        android:backgroundTint="#322C4C"
-        android:elevation="2dp"
-        android:shadowColor="#5C5C5C"
-        android:text=">"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagePerfil" />
+
 
     <ImageView
-        android:id="@+id/imagenCasa"
+        android:id="@+id/imagenCasa4"
         android:layout_width="170dp"
         android:layout_height="64dp"
         android:background="#181818"
@@ -81,9 +64,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotonSiguiente"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/casa" />
+
+    <TextView
+        android:id="@+id/texoNombre"
+        android:layout_width="225dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="56dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:paddingTop="9dp"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfil" />
+
+    <TextView
+        android:id="@+id/textoApellido"
+        android:layout_width="223dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="240dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:paddingTop="9dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/imagenCasa4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texoNombre"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/textoEmail"
+        android:layout_width="228dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:paddingTop="9dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/imagenCasa4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoApellido"
+        app:layout_constraintVertical_bias="0.019" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

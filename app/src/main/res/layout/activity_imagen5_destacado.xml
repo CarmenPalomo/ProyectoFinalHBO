@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_hbo"
+    tools:context=".Imagen1DestacadoActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="413dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fondo_hbo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
+
+    </Toolbar>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="175dp"
+        android:layout_height="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@mipmap/hbo_max_logo_black" />
+
+    <ImageView
+        android:id="@+id/imagenPerfil5"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.296"
+        />
+
+    <VideoView
+        android:id="@+id/video5"
+        android:layout_width="259dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imagenAquaman"
+        android:layout_width="103dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/video5"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.002"
+        app:srcCompat="@mipmap/pelicula_arturo" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="373dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/sinopsis"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imagenCasa5"
+        android:layout_width="170dp"
+        android:layout_height="64dp"
+        android:background="#181818"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/casa" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

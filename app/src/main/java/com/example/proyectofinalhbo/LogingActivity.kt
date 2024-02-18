@@ -1,6 +1,5 @@
 package com.example.proyectofinalhbo;
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -26,7 +25,8 @@ class LogingActivity : AppCompatActivity() {
     private lateinit var nombre : EditText
     private lateinit var apellido : EditText
     private lateinit var crearCuenta : Button
-    private  lateinit var BotonInicioSesion : Button
+    private lateinit var botonAtras : Button
+    private var idImagenSeleccionada: Int = 0
 
     private var indice = 0
     private var id = arrayOf(R.mipmap.perfil1, R.mipmap.perfil2,R.mipmap.perfil3,
@@ -48,15 +48,15 @@ class LogingActivity : AppCompatActivity() {
         nombre = findViewById(R.id.Nombre)
         apellido = findViewById(R.id.Apellido)
         crearCuenta = findViewById(R.id.BotonCrearCuent)
-        BotonInicioSesion = findViewById(R.id.BotonInicioSesion)
+        botonAtras = findViewById(R.id.atras)
 
         var imagenPerfil : ImageView = findViewById(R.id.imagePerfil1)
-        val botonSiguiente : Button = findViewById(R.id.BotonSiguiente)
+        val botonSiguiente : Button = findViewById(R.id.botonSiguiente)
 
         imagenPerfil.setImageResource(id[indice])
         botonSiguiente.setOnClickListener {
             indice = (indice + 1) % id.size
-
+            idImagenSeleccionada = id[indice]
             imagenPerfil.setImageResource(id[indice])
         }
 
@@ -70,10 +70,12 @@ class LogingActivity : AppCompatActivity() {
                         datosUsuario(
                             correo.text.toString(),
                             nombre.text.toString(),
-                            apellido.text.toString()
+                            apellido.text.toString(),
+                            idImagenSeleccionada
                         )
+                        val usuario= Usuario(correo.text.toString(), nombre.text.toString(), apellido.text.toString(),idImagenSeleccionada)
                         val registrado = Intent(this, MainActivity::class.java)
-                        registrado.putExtra("imagen",  imagenPerfil.id)
+                        registrado.putExtra("Persona",  usuario)
                         startActivity(registrado)
                     }else{
                         showAlert("Error registrando el usuario")
@@ -84,7 +86,7 @@ class LogingActivity : AppCompatActivity() {
         }
 
 
-        BotonInicioSesion.setOnClickListener {
+        botonAtras.setOnClickListener {
             val registrarse = Intent(this, MainActivity::class.java)
             startActivity(registrarse)
         }
@@ -102,16 +104,18 @@ class LogingActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun datosUsuario (correo : String, nombre : String, apellido : String){
+    private fun datosUsuario (
+        correo: String,
+        nombre: String,
+        apellido: String,
+        idImagenSeleccionada: Int
+    ){
         val usuarioActual : FirebaseUser? = auth.currentUser
         if (usuarioActual !=null) {
             // insertamos los datos del usuario actual en nuestra Base de Datos
-            val user = Usuario (correo, nombre, apellido)
+            val user = Usuario (correo, nombre, apellido, idImagenSeleccionada)
             usuariosRef.child(usuarioActual.uid).setValue(user)
-        } else {
-
         }
-
     }
 }
 

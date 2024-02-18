@@ -28,11 +28,10 @@
         app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/hbo_max_logo_black" />
 
     <ImageView
-        android:id="@+id/imagenPerfil"
+        android:id="@+id/imagenPerfil4"
         android:layout_width="70dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -41,17 +40,61 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.296"
-        app:srcCompat="@mipmap/perfil1" />
+       />
 
     <VideoView
-        android:id = "@+id/video"
-        android:layout_width="377dp"
-        android:layout_height="164dp"
-        android:layout_marginTop="56dp"
+        android:id="@+id/video4"
+        android:layout_width="259dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imagenAquaman"
+        android:layout_width="103dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/video4"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.002"
+        app:srcCompat="@mipmap/peliculaquaman" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="373dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/sinopsis"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imagenCasa4"
+        android:layout_width="170dp"
+        android:layout_height="64dp"
+        android:background="#181818"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/casa" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

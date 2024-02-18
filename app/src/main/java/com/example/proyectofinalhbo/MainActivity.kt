@@ -12,14 +12,16 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import java.util.logging.Logger
 
-public class MainActivity : AppCompatActivity() {
-
+class MainActivity : AppCompatActivity() {
+    private  val log: Logger = Logger.getLogger("MainActivity")
     private lateinit var crearCuenta: Button
     private lateinit var iniciarSesion: Button
     private lateinit var  auth: FirebaseAuth
     private lateinit var email: EditText
     private lateinit var contraseña: EditText
+    private lateinit var usuario: Usuario
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,16 +42,16 @@ public class MainActivity : AppCompatActivity() {
         iniciarSesion = findViewById(R.id.BotonIniciaSesion)
         email = findViewById(R.id.correoElectronico)
         contraseña = findViewById(R.id.contraseña)
-        val imagen = intent.getStringExtra("imagen")
-
+        val imagen = intent.getIntExtra("imagen", 0)
+        log.info("Imagen obtenida. El id es : $imagen")
         iniciarSesion.setOnClickListener {
             if (email.text.isNotEmpty() && contraseña.text.isNotEmpty()){
                 auth.signInWithEmailAndPassword(email.text.toString(),
                     contraseña.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
+                        usuario = intent.getParcelableExtra("Persona")!!
                         val logged = Intent(this, InicioActivity::class.java)
-                        logged.putExtra("email",email.text.toString())
-                        logged.putExtra("imagen",  imagen)
+                        logged.putExtra("Persona",  usuario)
                         startActivity(logged)
                     } else {
                         showAlert()

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinalHBO"
         tools:targetApi="31">
+        <activity
+            android:name=".Serie5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Serie4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Serie3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Serie2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Serie1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Pelicula5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Pelicula4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Pelicula3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Pelicula2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Pelicula1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Imagen5DestacadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Imagen4DestacadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Imagen3DestacadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Imagen2DestacadoActivity"
+            android:exported="false" />
         <activity
             android:name=".Imagen1DestacadoActivity"
             android:exported="false" />
