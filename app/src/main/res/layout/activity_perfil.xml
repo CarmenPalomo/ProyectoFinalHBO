@@ -16,8 +16,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </Toolbar>
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="131dp"
@@ -26,21 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
         app:srcCompat="@mipmap/hbo_max_logo_black" />
-
-
-
-
-    <ImageView
-        android:id="@+id/hbo_max_logo_balck"
-        android:layout_width="325dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/imagePerfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/imagePerfil"
         android:layout_width="158dp"
@@ -52,7 +35,6 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:srcCompat="@drawable/ic_launcher_background" />
-
 
 
     <ImageView

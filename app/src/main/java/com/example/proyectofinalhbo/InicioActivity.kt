@@ -30,7 +30,17 @@ class InicioActivity : AppCompatActivity() {
         val imagen3Destacado : ImageView = findViewById(R.id.imagen3Destacado)
         val imagen4Destacado : ImageView = findViewById(R.id.imagen4Destacado)
         val imagen5Destacado : ImageView = findViewById(R.id.imagen5Destacado)
-        val imagen = intent.getIntExtra("imagen", 0)
+        val imagen1Peliculas : ImageView = findViewById(R.id.imagen1Peliculas)
+        val imagen2Peliculas : ImageView = findViewById(R.id.imagen2Peliculas)
+        val imagen3Peliculas : ImageView = findViewById(R.id.imagen3Peliculas)
+        val imagen4Peliculas : ImageView = findViewById(R.id.imagen4Peliculas)
+        val imagen5Peliculas : ImageView = findViewById(R.id.imagen5Peliculas)
+        val imagen1Serie : ImageView = findViewById(R.id.imagen1Serie)
+        val imagen2Serie : ImageView = findViewById(R.id.imagen2Serie)
+        val imagen3Serie : ImageView = findViewById(R.id.imagen3Serie)
+        val imagen4Serie : ImageView = findViewById(R.id.imagen4Serie)
+        val imagen5Serie : ImageView = findViewById(R.id.imagen5Serie)
+
         usuario = intent.getParcelableExtra("Persona")!!
 
         imagenPerfil.setImageResource(usuario.getImagen())
@@ -73,6 +83,66 @@ class InicioActivity : AppCompatActivity() {
 
         imagen5Destacado.setOnClickListener {
             val inicio = Intent(this, Imagen5DestacadoActivity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen1Peliculas.setOnClickListener {
+            val inicio = Intent(this, Pelicula1Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen2Peliculas.setOnClickListener {
+            val inicio = Intent(this, Pelicula2Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen3Peliculas.setOnClickListener {
+            val inicio = Intent(this, Pelicula3Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen4Peliculas.setOnClickListener {
+            val inicio = Intent(this, Pelicula4Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen5Peliculas.setOnClickListener {
+            val inicio = Intent(this, Pelicula5Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen1Serie.setOnClickListener {
+            val inicio = Intent(this, Serie1Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen2Serie.setOnClickListener {
+            val inicio = Intent(this, Serie2Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen3Serie.setOnClickListener {
+            val inicio = Intent(this, Serie3Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen4Serie.setOnClickListener {
+            val inicio = Intent(this, Serie4Activity::class.java)
+            inicio.putExtra("Persona",  usuario)
+            startActivity(inicio)
+        }
+
+        imagen5Serie.setOnClickListener {
+            val inicio = Intent(this, Serie5Activity::class.java)
             inicio.putExtra("Persona",  usuario)
             startActivity(inicio)
         }

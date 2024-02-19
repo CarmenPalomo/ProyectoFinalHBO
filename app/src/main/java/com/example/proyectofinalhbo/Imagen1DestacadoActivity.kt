@@ -16,12 +16,12 @@ class Imagen1DestacadoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imagen1_destacado)
-        val imagenCasa: ImageView = findViewById(R.id.imagenCasa4)
-        var imagenPerfil : ImageView = findViewById(R.id.imagenPerfil4)
+        val imagenCasa: ImageView = findViewById(R.id.imagenCasa1)
+        var imagenPerfil : ImageView = findViewById(R.id.imagenPerfil1)
         usuario = intent.getParcelableExtra("Persona")!!
 
         imagenPerfil.setImageResource(usuario.getImagen())
-        video = findViewById(R.id.video4)
+        video = findViewById(R.id.video1)
 
         if (mediaController == null){
             mediaController = MediaController(this)

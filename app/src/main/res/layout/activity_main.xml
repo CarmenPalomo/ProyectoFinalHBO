@@ -32,6 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.045" />
 
+
     <EditText
         android:id="@+id/correoElectronico"
         android:layout_width="303dp"
@@ -47,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.034">
+        app:layout_constraintVertical_bias="0.091">
 
     </EditText>
 
@@ -67,13 +68,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/correoElectronico"
-        app:layout_constraintVertical_bias="0.064"></EditText>
+        app:layout_constraintVertical_bias="0.177"></EditText>
 
     <Button
         android:id="@+id/BotonIniciaSesion"
         android:layout_width="154dp"
         android:layout_height="47dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#322C4C"
         android:elevation="2dp"
         android:shadowColor="#5C5C5C"
@@ -83,67 +84,48 @@
         android:textStyle="bold"
         app:cornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contraseña" />
-
-    <TextView
-        android:id="@+id/olvidado_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="356dp"
-        android:text="¿Has olvidado tu contraseña?"
-        android:textColor="#7653F5"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BotonIniciaSesion"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/linea"
         android:layout_width="145dp"
         android:layout_height="23dp"
         android:layout_marginStart="20dp"
+        android:layout_marginBottom="296dp"
         android:background="@drawable/linea_horizontal"
         android:textColor="#7653F5"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/circulo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/olvidado_pass"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/circulo"
-        android:layout_width="77dp"
-        android:layout_height="23dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="79dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="296dp"
         android:text="O"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linea2"
-        app:layout_constraintTop_toBottomOf="@+id/olvidado_pass"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintEnd_toStartOf="@+id/linea2" />
 
     <TextView
         android:id="@+id/linea2"
         android:layout_width="145dp"
         android:layout_height="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="296dp"
         android:background="@drawable/linea_horizontal"
         android:textColor="#7653F5"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/olvidado_pass"
-        app:layout_constraintVertical_bias="0.009" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -154,10 +136,10 @@
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/circulo"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintVertical_bias="0.096" />
 
     <Button
         android:id="@+id/botonRegistrarse"
@@ -173,25 +155,10 @@
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.353"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <TextView
-        android:id="@+id/ayuda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
-        android:text="¿Necesitas ayuda para iniciar sesión?"
-        android:textColor="#7653F5"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonRegistrarse"
-        app:layout_constraintVertical_bias="0.69" />
+        app:layout_constraintVertical_bias="0.086" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

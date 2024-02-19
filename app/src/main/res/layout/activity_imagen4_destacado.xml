@@ -72,7 +72,7 @@
         android:layout_width="373dp"
         android:layout_height="106dp"
         android:layout_marginTop="60dp"
-        android:text="@string/sinopsis"
+        android:text="Una versión subversiva de Archie y sus amigos, explorando la vida provinciana, la oscuridad y las rarezas que burbujean bajo la aparentemente sana fachada de Riverdale."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"

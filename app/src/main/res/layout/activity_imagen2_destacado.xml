@@ -72,7 +72,7 @@
         android:layout_width="373dp"
         android:layout_height="106dp"
         android:layout_marginTop="60dp"
-        android:text="@string/sinopsis"
+        android:text="Basada en la obra de teatro de Jordi Vallejo, sigue a un grupo de personas que deben decidir si quieren conseguir ahora 100.000 euros o esperar diez años para conseguir un millón."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"

@@ -31,7 +31,7 @@ class Imagen3DestacadoActivity : AppCompatActivity() {
         }
 
         video!!.setMediaController(mediaController)
-        video!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.trailer_aquaman))
+        video!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.dune))
         video!!.requestFocus()
         video!!.start()
 

@@ -18,8 +18,6 @@
         app:titleTextColor="@color/white">
 
     </Toolbar>
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="175dp"
@@ -29,9 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"
         app:srcCompat="@mipmap/hbo_max_logo_black" />
-
     <ImageView
-        android:id="@+id/imagenPerfil"
+        android:id="@+id/imagenPerfil1"
         android:layout_width="70dp"
         android:layout_height="62dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -53,7 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/imagenAquaman"
         android:layout_width="103dp"
@@ -66,7 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.002"
         app:srcCompat="@mipmap/peliculaquaman" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="373dp"
@@ -84,7 +79,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imagenCasa"
+        android:id="@+id/imagenCasa1"
         android:layout_width="170dp"
         android:layout_height="64dp"
         android:background="#181818"

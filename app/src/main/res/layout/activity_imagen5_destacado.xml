@@ -72,7 +72,7 @@
         android:layout_width="373dp"
         android:layout_height="106dp"
         android:layout_marginTop="60dp"
-        android:text="@string/sinopsis"
+        android:text="Despojado de su derecho de nacimiento, Arturo sale adelante por las malas en los callejones de la ciudad. Pero una vez que saca la espada de la piedra, se ve obligado a asumir su verdadero legado, le guste o no."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textStyle="bold"
