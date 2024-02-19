@@ -9,19 +9,20 @@ import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
 
-class Imagen1DestacadoActivity : AppCompatActivity() {
+class Imagen5DestacadoActivity : AppCompatActivity() {
     var video : VideoView? = null
     var mediaController : MediaController? = null
     private lateinit var usuario: Usuario
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_imagen1_destacado)
-        val imagenCasa: ImageView = findViewById(R.id.imagenCasa4)
-        var imagenPerfil : ImageView = findViewById(R.id.imagenPerfil4)
+        setContentView(R.layout.activity_imagen5_destacado)
+
+        val imagenCasa: ImageView = findViewById(R.id.imagenCasa5)
+        var imagenPerfil : ImageView = findViewById(R.id.imagenPerfil5)
         usuario = intent.getParcelableExtra("Persona")!!
 
         imagenPerfil.setImageResource(usuario.getImagen())
-        video = findViewById(R.id.video4)
+        video = findViewById(R.id.video5)
 
         if (mediaController == null){
             mediaController = MediaController(this)
@@ -52,8 +53,5 @@ class Imagen1DestacadoActivity : AppCompatActivity() {
             startActivity(inicio)
 
         }
-
-
-
     }
 }

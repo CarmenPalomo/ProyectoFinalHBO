@@ -35,7 +35,7 @@
         app:srcCompat="@mipmap/hbo_max_logo_black" />
 
     <ImageView
-        android:id="@+id/imagenPerfil"
+        android:id="@+id/imagenPerfil4"
         android:layout_width="70dp"
         android:layout_height="62dp"
         android:visibility="visible"
@@ -44,8 +44,7 @@
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296"
-        android:src="@mipmap/perfil1" />
+        app:layout_constraintVertical_bias="0.296" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -294,7 +293,7 @@
         android:background="#16191A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/scrollDestacados"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/claqueta_cine" />
 
@@ -308,6 +307,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imagePeli"
 
+        app:layout_constraintTop_toBottomOf="@+id/scrollDestacados"
+        app:layout_constraintVertical_bias="0.985"
         app:srcCompat="@mipmap/televisor" />
 
 
