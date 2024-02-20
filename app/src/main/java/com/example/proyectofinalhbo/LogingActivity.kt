@@ -65,21 +65,21 @@ class LogingActivity : AppCompatActivity() {
         }
 
         crearCuenta.setOnClickListener {
-            if (correo.text.isNotEmpty() && contraseña.text.isNotEmpty() && nombre.text.isNotEmpty() && apellido.text.isNotEmpty()){
+            if (correo.text.isNotEmpty() && contraseña.text.isNotEmpty() && nombre.text.isNotEmpty() && apellido.text.isNotEmpty()) {
                 auth.createUserWithEmailAndPassword(
                     correo.text.toString(),
                     contraseña.text.toString()
                 ).addOnCompleteListener {
 
-                    if(contraseña.text.length<=5){
+                    if (contraseña.text.length <= 5) {
                         val builder = AlertDialog.Builder(this)
                         builder.setTitle("Error")
                         builder.setMessage("La contraseña no cumple con la complejidad")
-                                builder.setPositiveButton("Aceptar", null)
+                        builder.setPositiveButton("Aceptar", null)
                         val dialog: AlertDialog = builder.create()
                         dialog.show()
-                    }else{
-                        if(correo.text.contains("@")&&correo.text.contains(".")) {
+                    } else {
+                        if (correo.text.contains("@") && correo.text.contains(".")) {
 
                             if (it.isSuccessful) {
                                 datosUsuario(
@@ -102,6 +102,7 @@ class LogingActivity : AppCompatActivity() {
                             }
                         }
 
+                    }
                 }
             }
         }
