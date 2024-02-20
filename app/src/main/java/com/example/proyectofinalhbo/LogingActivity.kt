@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthEmailException
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -66,20 +70,37 @@ class LogingActivity : AppCompatActivity() {
                     correo.text.toString(),
                     contraseña.text.toString()
                 ).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        datosUsuario(
-                            correo.text.toString(),
-                            nombre.text.toString(),
-                            apellido.text.toString(),
-                            idImagenSeleccionada
-                        )
-                        val usuario= Usuario(correo.text.toString(), nombre.text.toString(), apellido.text.toString(),idImagenSeleccionada)
-                        val registrado = Intent(this, MainActivity::class.java)
-                        registrado.putExtra("Persona",  usuario)
-                        startActivity(registrado)
+
+                    if(contraseña.text.length<=5){
+                        val builder = AlertDialog.Builder(this)
+                        builder.setTitle("Error")
+                        builder.setMessage("La contraseña no cumple con la complejidad")
+                                builder.setPositiveButton("Aceptar", null)
+                        val dialog: AlertDialog = builder.create()
+                        dialog.show()
                     }else{
-                        showAlert("Error registrando el usuario")
-                }
+                        if(correo.text.contains("@")&&correo.text.contains(".")) {
+
+                            if (it.isSuccessful) {
+                                datosUsuario(
+                                    correo.text.toString(),
+                                    nombre.text.toString(),
+                                    apellido.text.toString(),
+                                    idImagenSeleccionada
+                                )
+                                val usuario = Usuario(
+                                    correo.text.toString(),
+                                    nombre.text.toString(),
+                                    apellido.text.toString(),
+                                    idImagenSeleccionada
+                                )
+                                val registrado = Intent(this, MainActivity::class.java)
+                                registrado.putExtra("Persona", usuario)
+                                startActivity(registrado)
+                            } else {
+                                showAlert("Error en la autentificacion")
+                            }
+                        }
 
                 }
             }
@@ -87,6 +108,7 @@ class LogingActivity : AppCompatActivity() {
 
 
         botonAtras.setOnClickListener {
+
             val registrarse = Intent(this, MainActivity::class.java)
             startActivity(registrarse)
         }

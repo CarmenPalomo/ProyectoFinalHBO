@@ -6,10 +6,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthEmailException
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import java.util.logging.Logger
@@ -54,9 +58,23 @@ class MainActivity : AppCompatActivity() {
                         logged.putExtra("Persona",  usuario)
                         startActivity(logged)
                     } else {
-                        showAlert()
+                        val error: String = when (it.exception) {
+                            is FirebaseAuthInvalidUserException -> "El usuario no existe"
+                            is FirebaseAuthEmailException -> "El correo no es valido"
+                            is FirebaseAuthInvalidCredentialsException -> "La contraseña es incorrecta"
+                            else -> "Error al autenticar"
+                        }
+                        Toast.makeText(this@MainActivity, error, Toast.LENGTH_LONG).show()
+
                     }
                 }
+            }else{
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Error")
+                builder.setMessage("Se ha producido un error en la creacion del usuario")
+                builder.setPositiveButton("Aceptar",null)
+                val dialog: AlertDialog = builder.create()
+                dialog.show()
             }
         }
 
@@ -66,15 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showAlert(){
-        Log.d(ContentValues.TAG, "Error creando nuevo usuario")
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error en el login de usuario")
-        builder.setPositiveButton("Aceptar",null)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
-    }
+
 
 
 }
