@@ -146,6 +146,7 @@
         android:layout_width="154dp"
         android:layout_height="47dp"
         android:layout_marginStart="32dp"
+        android:layout_marginBottom="52dp"
         android:backgroundTint="#322C4C"
         android:elevation="2dp"
         android:shadowColor="#5C5C5C"
@@ -156,10 +157,10 @@
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/atras"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintTop_toBottomOf="@+id/ContraseñaLog"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/atras"
